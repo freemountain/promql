@@ -51,6 +51,8 @@ if let Node::Operator { x, op: Op::And(op_mod), y } = ast {
 extern crate nom;
 #[macro_use]
 extern crate quick_error;
+#[macro_use]
+extern crate serde_derive;
 
 pub(crate) mod str;
 pub(crate) mod vec;

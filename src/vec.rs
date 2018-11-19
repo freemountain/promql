@@ -3,7 +3,7 @@ use nom::types::CompleteByteSlice;
 use str::string;
 
 /// Label filter operators.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub enum LabelMatchOp {
 	/** `=`  */ Eq,
 	/** `!=` */ Ne,
@@ -12,7 +12,7 @@ pub enum LabelMatchOp {
 }
 
 /// Single label filter.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct LabelMatch {
 	pub name: String,
 	pub op: LabelMatchOp,
@@ -59,7 +59,7 @@ assert_eq!(
 # }
 ```
 */
-#[derive(Debug, PartialEq)]
+#[derive(Serialize, Deserialize, Debug, PartialEq)]
 pub struct Vector {
 	/// Set of label filters
 	pub labels: Vec<LabelMatch>,

@@ -8,6 +8,8 @@ repository = "https://github.com/vthriller/promql"
 
 [dependencies]
 quick-error = "1.2"
+serde = "1.0.80"
+serde_derive = "1.0.80"
 
 [dependencies.nom]
 version = "4.0.0-beta1"
